@@ -1,7 +1,7 @@
 {
   "name": "jetpress",
-  "version": "1.0.9beta",
-  "description": "TurboPress is a high-performance server-side framework designed to streamline and accelerate web development tasks. Built for developers seeking speed and efficiency, TurboPress excels in handling HTTP requests, managing middleware, and routing traffic with ease. Leveraging modern JavaScript principles, TurboPress offers robust features for static file serving, dynamic route handling, and seamless integration of form data processing. Whether you're building APIs or full-stack web applications, TurboPress empowers developers to deliver responsive and scalable server solutions effortlessly.",
+  "version": "1.0.10beta",
+  "description": "JetPress is a high-performance, flexible, and extensible web server framework designed to streamline web development. Inspired by the robustness of Express and the speed of modern web frameworks, JetPress aims to provide developers with an efficient and versatile platform for building web applications and APIs.",
   "main": "index.js",
   "types": "index.d.ts",
   "scripts": {
