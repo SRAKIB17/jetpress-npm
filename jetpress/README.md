@@ -16,7 +16,7 @@
 10. **TypeScript Support**: Written in TypeScript, providing strong type definitions and interfaces, enhancing development experience and reducing runtime errors.
 11. **Extensible**: Easily extend JetPress with additional features and plugins as needed.
 
-## [Full documentation](<https://github.com/SRAKIB17/jetpress-npm>)
+## [Full documentation](<https://github.com/SRAKIB17/jetpress-npm?tab=readme-ov-file#developer-documentation-for-jetpress>)
 
 #### Example Use Case
 

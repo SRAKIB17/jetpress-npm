@@ -1,5 +1,5 @@
 {
-  "name": "express-with-typescript-template",
+  "name": "jetpress-with-typescript",
   "version": "1.0.0",
   "description": "",
   "scripts": {
@@ -10,15 +10,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/srakib17"
+    "url": "git+https://github.com/SRAKIB17/jetpress-npm"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/srakib17"
+    "url": "https://github.com/SRAKIB17/jetpress-npm"
   },
-  "homepage": "https://github.com/srakib17",
+  "homepage": "https://github.com/SRAKIB17/jetpress-npm",
   "dependencies": {
     "@types/cors": "^2.8.17",
     "cors": "^2.8.5",

@@ -1,6 +1,6 @@
 {
   "name": "jetpress",
-  "version": "1.0.10beta",
+  "version": "1.0.11beta",
   "description": "JetPress is a high-performance, flexible, and extensible web server framework designed to streamline web development. Inspired by the robustness of Express and the speed of modern web frameworks, JetPress aims to provide developers with an efficient and versatile platform for building web applications and APIs.",
   "main": "index.js",
   "types": "index.d.ts",
