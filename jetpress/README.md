@@ -2,7 +2,7 @@
 
 **JetPress** is a high-performance, flexible, and extensible web server framework designed to streamline web development. Inspired by the robustness of Express and the speed of modern web frameworks, JetPress aims to provide developers with an efficient and versatile platform for building web applications and APIs.
 
-<img src="https://i.ibb.co/Qby88xp/jetpress.png" alt="jetpress" border="0" width='200'>
+<img  src="https://i.ibb.co/Fh6ytjC/j-9ios-3-Q-27-Ck-E0q-Vmqj-Q.png" alt="jetpress" border="0" width='200'>
 
 #### Key Features
 
