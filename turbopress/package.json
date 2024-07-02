@@ -1,0 +1,24 @@
+{
+  "name": "turbopress",
+  "version": "1.0.9beta",
+  "description": "TurboPress is a high-performance server-side framework designed to streamline and accelerate web development tasks. Built for developers seeking speed and efficiency, TurboPress excels in handling HTTP requests, managing middleware, and routing traffic with ease. Leveraging modern JavaScript principles, TurboPress offers robust features for static file serving, dynamic route handling, and seamless integration of form data processing. Whether you're building APIs or full-stack web applications, TurboPress empowers developers to deliver responsive and scalable server solutions effortlessly.",
+  "main": "index.js",
+  "types": "index.d.ts",
+  "scripts": {
+    "build": "npx tsc",
+    "start": "node dist/index.js",
+    "dev": "nodemon app.ts",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/srakib17/turbopress-npm"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/srakib17/turbopress-npm"
+  },
+  "homepage": "https://github.com/srakib17/turbopress-npm"
+}

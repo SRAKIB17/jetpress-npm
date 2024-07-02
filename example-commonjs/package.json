@@ -1,0 +1,29 @@
+{
+  "name": "express-with-typescript-template",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/srakib17"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/srakib17"
+  },
+  "homepage": "https://github.com/srakib17",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "route-titan": "^1.0.5-beta"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.0"
+  }
+}
