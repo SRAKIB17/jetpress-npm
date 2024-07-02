@@ -1,6 +1,6 @@
 import path from 'path';
 import { readFile, writeFile } from 'fs';
-import routeTitan from 'route-titan'; // Import the CommonJS module
+import routeTitan from 'jetpress'; // Import the CommonJS module
 const { Request, Response, Router, Server } = routeTitan;
 const server = new Server();
 
