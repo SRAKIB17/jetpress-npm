@@ -72,3 +72,7 @@ server.listen(3000, () => {
 ```
 
 With **JetPress**, you can build modern web applications quickly and efficiently, leveraging its high performance, flexible routing, and comprehensive feature set. Whether you're building a simple website or a complex API, JetPress has the tools you need to succeed.
+
+#### Contributing
+
+If you want to encourage contributions, include guidelines for contributing to the project. This may include information on how to report issues or submit pull requests.
