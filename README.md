@@ -2,6 +2,8 @@
 
 **JetPress** is a high-performance, flexible, and extensible web server framework designed to streamline web development. Inspired by the robustness of Express and the speed of modern web frameworks, JetPress aims to provide developers with an efficient and versatile platform for building web applications and APIs.
 
+<img src="https://i.ibb.co/Qby88xp/jetpress.png" alt="jetpress" border="0" width='200'>
+
 ## Table of Contents
 
 - [Developer Documentation for `jetpress`](#developer-documentation-for-jetpress)
@@ -99,7 +101,7 @@
 To get started, ensure you have installed the necessary dependencies:
 
 ```bash
-npm install jetpress
+npm install jetpress@latest
 ```
 
 ---

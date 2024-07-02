@@ -1,54 +1,48 @@
-import { writeFile } from 'fs';
-import path from 'path';
-import { Request, Response, Router, Server } from 'jetpress'; // Import the CommonJS module
+import { writeFile } from "fs";
+import { FormWizard, Request, Response, Router, Server } from "jetpress";
+import path from "path";
 
 const server = new Server();
 
-// Static serve files:
-server.static('/', './test');
-server.static('/', './uploads');
+// Middleware for parsing form data
+server.use(FormWizard);
 
-// Example GET route
-server.get('/', (req, res) => {
-    return res.json({});
+// Static file serving
+server.static('/', './public');
+server.static('/uploads', './uploads');
+
+// Define routes
+server.get('/', (req: Request, res: Response) => {
+    res.html('<h1>Welcome to JetPress!</h1>');
 });
 
-const router = new Router();
-server.use('/all', [(req, res, next) => {
-    next();
-}]);
-
-router.get("/", (req: Request, res: Response) => {
-    res.json({ test: 345 });
-});
-router.get("/testing", (req: Request, res: Response) => {
-    res.send({ xx: 34534 });
-});
-server.use('/', router);
-
-server.post('/upload', (req, res) => {
+server.post('/upload', (req: Request, res: Response) => {
     const uploadedFile = req.file;
     if (!uploadedFile) {
         return res.status(400).send('No file uploaded.');
     }
-    // Handle the uploaded file here, for example, save it or process it
+
     const newPath = path.join(__dirname, 'uploads', uploadedFile.filename);
-    writeFile(newPath, uploadedFile.buffer, (err) => {
+    writeFile(newPath, uploadedFile.buffer, err => {
         if (err) throw err;
         console.log('File saved successfully:', newPath);
         res.send('File uploaded and processed successfully.');
     });
 });
 
-server.all('/all', (req, res) => {
-    const x = req.file;
-    return res.json({ x: "x.buffer" });
+// Example route using router
+const router = new Router();
+router.get("/example", (req: Request, res: Response) => {
+    res.json({ message: "Hello from the router!" });
+});
+server.use('/api', router);
+
+// Handle all other routes with a 404
+server.use("*", (req: Request, res: Response) => {
+    res.html("Not Found");
 });
 
+// Start the server
 server.listen(3000, () => {
-    console.log('Server running at http://localhost:3000');
-});
-
-server.use("*", (req, res) => {
-    return res.html("Not Found");
+    console.log('JetPress server running at http://localhost:3000');
 });
