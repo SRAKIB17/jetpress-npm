@@ -4,6 +4,10 @@
 
 <img  src="https://i.ibb.co/Fh6ytjC/j-9ios-3-Q-27-Ck-E0q-Vmqj-Q.png" alt="jetpress" border="0" width='200'>
 
+```bash
+npm i jetpress@latest
+```
+
 #### Key Features
 
 1. **High Performance**: Built with performance in mind, JetPress ensures rapid request handling and efficient resource management.
