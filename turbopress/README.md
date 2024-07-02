@@ -1,10 +1,10 @@
-# Developer Documentation for `route-titan`
+# Developer Documentation for `jetpress`
 
-This documentation covers the implementation and usage of the `Server`, `Router`, and related types and interfaces provided by the `route-titan` module. It includes examples for setting up a server, handling requests and responses, serving static files, and uploading files.
+This documentation covers the implementation and usage of the `Server`, `Router`, and related types and interfaces provided by the `jetpress` module. It includes examples for setting up a server, handling requests and responses, serving static files, and uploading files.
 
 ## Table of Contents
 
-- [Developer Documentation for `route-titan`](#developer-documentation-for-route-titan)
+- [Developer Documentation for `jetpress`](#developer-documentation-for-jetpress)
   - [Table of Contents](#table-of-contents)
   - [Setup](#setup)
   - [Creating a Server](#creating-a-server)
@@ -99,7 +99,7 @@ This documentation covers the implementation and usage of the `Server`, `Router`
 To get started, ensure you have installed the necessary dependencies:
 
 ```bash
-npm install route-titan
+npm install jetpress
 ```
 
 ---
@@ -109,7 +109,7 @@ npm install route-titan
 First, import the necessary components and create an instance of the `Server` class:
 
 ```typescript
-import { Server, FormWizard } from "route-titan";
+import { Server, FormWizard } from "jetpress";
 
 // Create a server instance
 const server = new Server();
@@ -287,7 +287,7 @@ server.use('/api', router);
 #### Here's the complete example
 
 ```javascript
-import { Server, Router } from'route-titan';
+import { Server, Router } from'jetpress';
 
 // Create a server instance
 const server = new Server();
@@ -452,7 +452,7 @@ server.get('/delete-cookie', (req, res) => {
 
 ## `server.use`
 
-The `server.use` method in the `route-titan` package is used to apply middleware functions and route handlers to the server. It can be used in various ways to add middleware and route handlers to specific paths or globally to the entire server.
+The `server.use` method in the `jetpress` package is used to apply middleware functions and route handlers to the server. It can be used in various ways to add middleware and route handlers to specific paths or globally to the entire server.
 
 ### Signature
 
@@ -530,7 +530,7 @@ server.use('/specific-path', middlewareFunction, routeHandlerFunction);
 server.use('/specific-path', [middlewareFunction1, middlewareFunction2], routeHandlerFunction);
 ```
 
-Here's the handling "Not Found" scenarios using the `server.use` method in the `route-titan` package:
+Here's the handling "Not Found" scenarios using the `server.use` method in the `jetpress` package:
 
 ---
 
@@ -798,7 +798,7 @@ server.use(middleware, (req, res) => {
 Here is an example project that combines all the concepts discussed:
 
 ```typescript
-import { Server, FormWizard, Request, Response, Router } from "route-titan";
+import { Server, FormWizard, Request, Response, Router } from "jetpress";
 import path from 'path';
 import fs from 'fs';
 
@@ -871,4 +871,4 @@ server.listen(3000, () => {
 
 ## Summary
 
-This documentation provides an overview of how to implement a web server using the `route-titan` module, including handling different types of responses, serving static files, handling file uploads, and managing routes and middleware. For further customization and advanced use cases, refer to the module's API documentation.
+This documentation provides an overview of how to implement a web server using the `jetpress` module, including handling different types of responses, serving static files, handling file uploads, and managing routes and middleware. For further customization and advanced use cases, refer to the module's API documentation.
