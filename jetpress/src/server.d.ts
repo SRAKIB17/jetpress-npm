@@ -172,8 +172,9 @@ export class Router {
 export class Server extends Router {
     constructor(option?: ServerOptionsProps);
 
-    static(route: string, path: string): void;
-    static(path: string): void;
+    static(route: string, folder: string, option?: StaticServeOption): void;
+    static(folder: string, Option?: StaticServeOption): void;
+
     config(middlewares: Middleware[]): void;
     config(middleware: Middleware): void;
 
