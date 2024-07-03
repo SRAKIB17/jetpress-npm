@@ -23,7 +23,7 @@
     "@types/cors": "^2.8.17",
     "cors": "^2.8.5",
     "dotenv": "^16.4.5",
-    "jetpress": "^1.0.11beta"
+    "jetpress": "^1.0.19"
   },
   "devDependencies": {
     "nodemon": "^3.1.0",
