@@ -25,6 +25,7 @@
       - [`server.config`](#serverconfig-1)
       - [`server.use`](#serveruse-1)
     - [Example](#example-1)
+    - [CORS Middleware](#cors-middleware)
   - [Defining Routes](#defining-routes)
     - [Simple Routes](#simple-routes)
     - [Routes with Middleware](#routes-with-middleware)
@@ -237,6 +238,29 @@ server.config([cors(), helmet()]);
 server.use(cors());
 // array
 server.use([middleware, middleware1])
+```
+
+### CORS Middleware
+
+```ts
+function corsMiddleware(req: Request, res: Response, next: () => void) {
+    const allowedOrigins = ['https://example1.com', 'https://example2.com']; // Replace with your two specific website URLs
+    const requestOrigin = req.headers.origin;
+    // Check if the request origin is allowed
+    if (requestOrigin && allowedOrigins.includes(requestOrigin)) {
+        res.setHeader('Access-Control-Allow-Origin', requestOrigin); // Allow requests from the specific origin
+        res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, PATCH, DELETE, OPTIONS'); // Allow specified HTTP methods
+        res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization'); // Allow specified headers
+    }
+    next();
+}
+
+function corsMiddleware(req: Request, res: Response, next: () => void) {
+    res.setHeader('Access-Control-Allow-Origin', '*'); // Allow requests from any origin
+    res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, PATCH, DELETE, OPTIONS'); // Allow specified HTTP methods
+    res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization'); // Allow specified headers
+    next();
+}
 ```
 
 ---
