@@ -1,6 +1,6 @@
 # Developer Documentation for `jetpress`
 
-**JetPress** is a high-performance, flexible, and extensible web server framework designed to streamline web development. Inspired by the robustness of Express and the speed of modern web frameworks, JetPress aims to provide developers with an efficient and versatile platform for building web applications and APIs.
+**JetPress** is a high-performance, flexible, and extensible web server framework designed to streamline web development.JetPress aims to provide developers with an efficient and versatile platform for building web applications and APIs.JetPress is a high-performance Node.js framework for building fast and scalable server applications using TypeScript. It also supports Bun for an even faster runtime experience.
 
 <img  src="https://i.ibb.co/Fh6ytjC/j-9ios-3-Q-27-Ck-E0q-Vmqj-Q.png" alt="jetpress" border="0" width='200'>
 

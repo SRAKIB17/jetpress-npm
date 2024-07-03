@@ -1,7 +1,7 @@
 {
   "name": "jetpress",
-  "version": "1.1.23",
-  "description": "JetPress is a high-performance, flexible, and extensible web server framework designed to streamline web development. Inspired by the robustness of Express and the speed of modern web frameworks, JetPress aims to provide developers with an efficient and versatile platform for building web applications and APIs.",
+  "version": "1.1.24",
+  "description": "JetPress is a high-performance, flexible, and extensible web server framework designed to streamline web development.JetPress aims to provide developers with an efficient and versatile platform for building web applications and APIs.JetPress is a high-performance Node.js framework for building fast and scalable server applications using TypeScript. It also supports Bun for an even faster runtime experience.",
   "main": "index.js",
   "types": "index.d.ts",
   "scripts": {
