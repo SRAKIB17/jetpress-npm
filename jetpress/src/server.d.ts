@@ -8,9 +8,7 @@ export function FormWizard(req: Request, res: Response, next: () => void): void;
 
 export type Callback = (req: Request, res: Response) => void;
 
-export interface ParsedCookie {
-    [key: string]: string;
-}
+export type ParsedCookie = Record<string, string>
 
 export interface SecureOption extends ServerOptions {
     enableSsl?: true;
@@ -18,6 +16,11 @@ export interface SecureOption extends ServerOptions {
 
 export interface Option extends ServerOptions {
     enableSsl?: false;
+}
+
+export type StaticServeOption = {
+    cacheControl?: string,
+    headers?: Record<string, string>
 }
 
 export type ServerOptionsProps = SecureOption | Option;
@@ -64,24 +67,33 @@ export type File = {
 }
 
 export interface Request extends IncomingMessage {
-    params: { [key: string]: string };
-    cookies: ParsedCookie;
-    query: { [key: string]: string };
-    body: { [key: string]: string };
-    file: File;
-    files: File[];
+    params: {
+        [key: string]: string
+    },
+    cookies: ParsedCookie,
+    query: {
+        [key: string]: string
+    },
+    body: {
+        [key: string]: string
+    },
+    path: string,
+    file: file,
+    files: file[],
     location: {
-        hash: string | null;
-        protocol: string | null;
-        origin: string | null;
-        username: string | null;
-        password: string | null;
-        hostname: string | null;
-        port: string | null;
-        href: string | null;
-        query: { [key: string]: string };
-        path: string | null;
-    };
+        hash: string | undefined,
+        protocol: string | undefined,
+        origin: string | undefined,
+        username: string | undefined,
+        password: string | undefined,
+        hostname: string | undefined,
+        port: string | undefined,
+        href: string | undefined,
+        query: {
+            [key: string]: string
+        },
+        path: string
+    }
 }
 
 export interface ResponseMethod {

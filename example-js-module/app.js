@@ -7,9 +7,17 @@ const server = new Server();
 server.use(FormWizard);
 
 // Static file serving
-server.static('/', './public');
-server.static('/uploads', './uploads');
 
+server.static('/uploads', './uploads');
+server.static('/static', path.join(__dirname, 'public'), {
+    cacheControl: 'public, max-age=31536000', // 1 year
+    headers: {
+        'Content-Security-Policy': "default-src 'self'",
+        'X-Content-Type-Options': 'nosniff',
+        'X-Frame-Options': 'DENY',
+        'X-XSS-Protection': '1; mode=block'
+    }
+});
 // Define routes
 server.get('/', (req, res) => {
     res.html('<h1>Welcome to JetPress!</h1>');

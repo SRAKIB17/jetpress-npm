@@ -37,8 +37,26 @@ const server = new Server();
 server.use(FormWizard);
 
 // Static file serving
-server.static('/', './public');
+server.static('/static', path.join(__dirname, 'public'), {
+    cacheControl: 'public, max-age=31536000', // 1 year
+    headers: {
+        'Content-Security-Policy': "default-src 'self'",
+        'X-Content-Type-Options': 'nosniff',
+        'X-Frame-Options': 'DENY',
+        'X-XSS-Protection': '1; mode=block'
+    }
+});
 server.static('/uploads', './uploads');
+// Serve static folder with cache control and custom headers
+server.static('/static', path.join(__dirname, 'public'), {
+    cacheControl: 'public, max-age=31536000', // 1 year
+    headers: {
+        'Content-Security-Policy': "default-src 'self'",
+        'X-Content-Type-Options': 'nosniff',
+        'X-Frame-Options': 'DENY',
+        'X-XSS-Protection': '1; mode=block'
+    }
+});
 
 // Define routes
 server.get('/', (req: Request, res: Response) => {

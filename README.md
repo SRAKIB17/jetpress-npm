@@ -658,6 +658,36 @@ server.static(path.join(__dirname, 'public'));
 - **Parameters:**
   - `route` (string): The route at which the static content will be served.
   - `path` (string): The path to the static file or folder.
+  - `StaticServeOption`:.
+    - `staticOptions` object is created with `cacheControl` and `headers` properties.
+
+1. **`cacheControl?: string`**:
+   - This property allows you to specify the cache control directives for HTTP caching. It determines how the client and intermediate caches should behave when caching the served static files.
+   - Example usage: `"public, max-age=31536000"` sets the cache to be publicly cached for 1 year.
+
+2. **`headers?: Record<string, string>`**:
+   - This property is used to specify additional HTTP headers that you want to set in the response for the static files.
+   - The `Record<string, string>` type means it's an object where keys are strings (header names) and values are strings (header values).
+
+```typescript
+headers: {
+    'Content-Security-Policy': "default-src 'self'",
+    'X-Content-Type-Options': 'nosniff',
+    'X-Frame-Options': 'DENY',
+    'X-XSS-Protection': '1; mode=block'
+}
+
+const staticOptions: StaticServeOption = {
+    cacheControl: 'public, max-age=31536000', // 1 year
+    headers: {
+        'Content-Security-Policy': "default-src 'self'",
+        'X-Content-Type-Options': 'nosniff',
+        'X-Frame-Options': 'DENY',
+        'X-XSS-Protection': '1; mode=block'
+    }
+};
+server.static('/static', path.join(__dirname, 'public'), staticOptions);
+```
 
 #### Overloads
 
