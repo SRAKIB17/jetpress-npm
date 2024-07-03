@@ -151,6 +151,10 @@ export class Router {
     delete(path: string, middlewares: Middleware[], callback: Callback): void;
     delete(path: string, middlewares: Middleware, callback: Callback): void;
 
+    options(path: string, callback: Callback): void;
+    options(path: string, middlewares: Middleware[], callback: Callback): void;
+    options(path: string, middlewares: Middleware, callback: Callback): void;
+
     all(path: string, callback: Callback): void;
     all(path: string, middlewares: Middleware[], callback: Callback): void;
     all(path: string, middlewares: Middleware, callback: Callback): void;
